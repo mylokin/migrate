@@ -10,7 +10,7 @@ A simple generic database migration tool
 '''
 
 
-__version__ = '0.3.10'
+__version__ = '0.3.11'
 __all__ = ['Migrate', 'MigrateException']
 
 import os
@@ -317,9 +317,11 @@ commands:
         Migrate(**config).run()
     except MigrateException as e:
         print(str(e), file=sys.stderr)
+        raise
     except Exception as e:
         print(str(e), file=sys.stderr)
         parser.print_usage(sys.stderr)
+        raise
 
 
 if __name__ == '__main__':
