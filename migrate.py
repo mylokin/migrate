@@ -13,6 +13,7 @@ __version__ = '0.3.7'
 __all__ = ['Migrate', 'MigrateException']
 
 import os
+import pwd
 import sys
 import argparse
 import glob
