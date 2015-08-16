@@ -238,7 +238,7 @@ def main(*args):
     # allow flexibility for testing
     args = args or sys.argv[1:]
 
-    login_name = os.getlogin()
+    login_name = pwd.getpwuid(os.getuid())[0]
     migration_path = os.path.join(os.getcwd(), "migrations")
     program = os.path.splitext(os.path.split(__file__)[1])[0]
 
