@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 '''
-    migrate
-    ~~~~~~~
-    A simple generic database migration tool
+migrate
+-------
 
-    :copyright: (c) 2014 Francis Asante <kofrasa@gmail.com>
-    :license: MIT
+A simple generic database migration tool
+
+:copyright: (c) 2014 Francis Asante <kofrasa@gmail.com>
+:license: MIT
 '''
 
 
