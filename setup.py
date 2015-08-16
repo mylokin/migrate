@@ -52,7 +52,7 @@ setup(
         'Topic :: Utilities'
     ],
     entry_points={
-        'console_scripts': ['migrate=migrate3:main']
+        'console_scripts': ['migrate3=migrate3:main']
     },
     test_suite = 'test_migrate',
 )
