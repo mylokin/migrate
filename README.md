@@ -1,5 +1,7 @@
-migrate
-=======
+migrate3
+========
+
+[![Build Status](https://travis-ci.org/mylokin/migrate3.svg?branch=master)](https://travis-ci.org/mylokin/migrate3)
 
 A simple language agnostic database migration tool
 
@@ -10,7 +12,7 @@ with extensions **.up.sql** and **.down.sql** for upgrading and downgrading the 
 install
 -------
 ```sh
-$ pip install migrate
+$ pip install migrate3
 ```
 
 usage
