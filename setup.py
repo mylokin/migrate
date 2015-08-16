@@ -20,22 +20,22 @@ usage
 
 See Readme_
 
-.. _Readme: https://github.com/kofrasa/migrate/blob/master/README.md
+.. _Readme: https://github.com/migrate/migrate/blob/master/README.md
 '''
 
-import migrate
+import migrate3
 from setuptools import setup
 
 setup(
-    name='migrate',
-    version=migrate.__version__,
+    name='migrate3',
+    version=migrate3.__version__,
     license='MIT',
     author='Francis Asante',
     author_email='kofrasa@gmail.com',
-    url='https://github.com/kofrasa/migrate',
+    url='https://github.com/mylokin/migrate',
     description='A simple language agnostic database migration tool',
     long_description=__doc__,
-    py_modules=['migrate'],
+    py_modules=['migrate3'],
     include_package_data=True,
     zip_safe=False,
     classifiers=[
@@ -51,6 +51,7 @@ setup(
         'Topic :: Utilities'
     ],
     entry_points={
-        'console_scripts': ['migrate=migrate:main']
-    }
+        'console_scripts': ['migrate=migrate3:main']
+    },
+    test_suite = 'test_migrate',
 )
