@@ -1,4 +1,4 @@
-"""
+'''
 Language agnostic database migration tool
 
 migrate
@@ -21,7 +21,7 @@ usage
 See Readme_
 
 .. _Readme: https://github.com/kofrasa/migrate/blob/master/README.md
-"""
+'''
 
 import migrate
 from setuptools import setup
@@ -33,7 +33,7 @@ setup(
     author='Francis Asante',
     author_email='kofrasa@gmail.com',
     url='https://github.com/kofrasa/migrate',
-    description="A simple language agnostic database migration tool",
+    description='A simple language agnostic database migration tool',
     long_description=__doc__,
     py_modules=['migrate'],
     include_package_data=True,
