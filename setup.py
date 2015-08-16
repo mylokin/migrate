@@ -39,13 +39,14 @@ setup(
     include_package_data=True,
     zip_safe=False,
     classifiers=[
+        'Development Status :: 4 - Beta',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3.4',
         'Environment :: Console',
-        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
-        'License :: OSI Approved :: MIT License',
         'Operating System :: POSIX',
-        'Programming Language :: Python',
+        'License :: OSI Approved :: MIT License',
         'Topic :: Software Development :: Libraries',
         'Topic :: Database',
         'Topic :: Utilities'
