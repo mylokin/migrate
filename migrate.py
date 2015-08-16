@@ -7,7 +7,7 @@
     :copyright: (c) 2014 Francis Asante <kofrasa@gmail.com>
     :license: MIT
 """
-from __future__ import print_function
+
 
 __version__ = '0.3.7'
 __all__ = ['Migrate', 'MigrateException']
@@ -20,9 +20,10 @@ import string
 import subprocess
 import tempfile
 from datetime import datetime
+import collections
 
 try:
-    from ConfigParser import ConfigParser
+    from configparser import ConfigParser
 except:
     from configparser import ConfigParser
 
@@ -66,7 +67,7 @@ class Migrate(object):
         os.chdir(self._migration_path)
         # cache ordered list of the names of all revision folders
         self._revisions = list(map(str,
-                                   sorted(map(int, filter(lambda x: x.isdigit(), glob.glob("*"))))))
+                                   sorted(map(int, [x for x in glob.glob("*") if x.isdigit()]))))
         os.chdir(current_dir)
 
     def _log(self, level, msg):
@@ -164,7 +165,7 @@ class Migrate(object):
     def _exec(self, files, rev=0):
         cmd = self._get_command()
         func = globals()["exec_%s" % self._engine]
-        assert callable(func), "no exec function found for " + self._engine
+        assert isinstance(func, collections.Callable), "no exec function found for " + self._engine
         for f in files:
             self._log(1, "applying: %s/%s" % (rev, os.path.basename(f)))
             try:
